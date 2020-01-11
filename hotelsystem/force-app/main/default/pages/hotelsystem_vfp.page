@@ -1,0 +1,19 @@
+<apex:page standardController="Hotel__c" sidebar="false" showHeader="false" standardStylesheets="false">
+    
+    <apex:includeScript value="/lightning/lightning.out.js"/>
+    
+
+
+    <div id="idhotelsystem_main_cmp"></div>
+
+    <script>
+    $Lightning.use("c:hotelsystem_app", function() {
+        $Lightning.createComponent("c:hotelsystem_main_cmp",
+                    {},
+                    "idhotelsystem_main_cmp",
+                    function(cmp) {
+                        console.log('log: App is hosted');
+                    });
+        });
+    </script>
+</apex:page>
